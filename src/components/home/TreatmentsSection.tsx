@@ -15,16 +15,16 @@ const treatments = [
     icon: Flower2
   },
   {
-    title: "Thyroid Care",
-    slug: "thyroid-disorders",
-    description: "Rejuvenate your metabolism and energy levels with specialized root-cause treatments.",
-    icon: Activity
-  },
-  {
     title: "Infertility",
     slug: "infertility",
     description: "Enhance fertility naturally with detox therapies, diet, and lifestyle modifications.",
     icon: Baby
+  },
+  {
+    title: "Menstrual Disorders",
+    slug: "menstrual-disorders",
+    description: "Relief from pain, heavy bleeding, and irregular cycles with gentle Ayurvedic care.",
+    icon: CalendarDays
   },
   {
     title: "Weight Management",
@@ -39,10 +39,10 @@ const treatments = [
     icon: Sparkles
   },
   {
-    title: "Menstrual Disorders",
-    slug: "menstrual-disorders",
-    description: "Relief from pain, heavy bleeding, and irregular cycles with gentle Ayurvedic care.",
-    icon: CalendarDays
+    title: "Thyroid Care",
+    slug: "thyroid-disorders",
+    description: "Rejuvenate your metabolism and energy levels with specialized root-cause treatments.",
+    icon: Activity
   }
 ];
 
