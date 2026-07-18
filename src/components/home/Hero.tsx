@@ -16,7 +16,8 @@ export function Hero() {
       <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-y-8"
         >
@@ -36,7 +37,7 @@ export function Hero() {
           
           <div className="flex flex-wrap gap-4 pt-4">
             <Link href="/book-appointment">
-              <Button size="lg" className="rounded-full h-14 px-8 text-lg font-medium shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+              <Button size="lg" className="rounded-full h-14 px-8 text-lg font-medium shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-transform">
                 <CalendarDays className="mr-2 h-5 w-5" />
                 Book Appointment
               </Button>
@@ -45,7 +46,7 @@ export function Hero() {
               onClick={() => window.dispatchEvent(new CustomEvent('open-whatsapp-widget'))}
               size="lg" 
               variant="outline" 
-              className="rounded-full h-14 px-8 text-lg font-medium border-primary/20 text-primary hover:bg-primary/5 hover:scale-105 transition-transform"
+              className="rounded-full h-14 px-8 text-lg font-medium border-primary/20 text-primary hover:bg-primary/5 hover:scale-105 active:scale-95 transition-transform"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp Consultation
@@ -68,9 +69,10 @@ export function Hero() {
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="relative lg:h-[600px] flex items-center justify-center"
+          className="relative h-[350px] md:h-[500px] lg:h-[600px] w-full mt-8 lg:mt-0 flex items-center justify-center"
         >
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-[40px] transform rotate-3" />
           <div className="absolute inset-0 rounded-[40px] border-4 border-white shadow-2xl overflow-hidden bg-background">
@@ -78,7 +80,7 @@ export function Hero() {
               src="/images/ayurveda-hero.png" 
               alt="Ayurvedic Natural Healing" 
               fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
+              className="object-cover transition-transform duration-700 hover:scale-105 active:scale-95"
               priority
             />
           </div>

@@ -67,16 +67,16 @@ export function TreatmentsSection() {
           {treatments.map((treatment, index) => (
             <motion.div
               key={treatment.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
             >
               <Link href={`/treatments/${treatment.slug}`}>
-                <Card className="h-full border-primary/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-background/50 backdrop-blur-sm group cursor-pointer overflow-hidden relative">
+                <Card className="h-full border-primary/10 shadow-sm hover:shadow-xl hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 bg-background/50 backdrop-blur-sm group cursor-pointer overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <CardHeader>
-                    <div className="w-16 h-16 rounded-full border-2 border-primary bg-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-sm">
+                    <div className="w-16 h-16 rounded-full border-2 border-primary bg-white flex items-center justify-center mb-4 group-hover:scale-110 active:scale-95 transition-transform shadow-sm">
                       <treatment.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
                     </div>
                     <CardTitle className="font-heading text-xl">{treatment.title}</CardTitle>
