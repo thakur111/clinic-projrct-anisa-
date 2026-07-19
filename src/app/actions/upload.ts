@@ -21,6 +21,13 @@ export async function uploadImage(formData: FormData) {
     const uploadDir = path.join(process.cwd(), "public", "uploads");
     const filepath = path.join(uploadDir, filename);
 
+    // Ensure the directory exists
+    try {
+      await import("fs/promises").then((fs) => fs.mkdir(uploadDir, { recursive: true }));
+    } catch (err) {
+      // Ignore if exists
+    }
+
     await writeFile(filepath, buffer);
 
     return { success: true, url: `/uploads/${filename}` };
