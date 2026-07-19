@@ -22,14 +22,25 @@ export const metadata: Metadata = {
   },
   description: "Premium holistic Ayurvedic treatments for women specializing in PCOS, Thyroid, Infertility, and natural weight management by Dr. Anisa Sarvath.",
   keywords: [
-    "Ayurvedic Doctor",
-    "Women's Health",
-    "PCOS Treatment Ayurveda",
-    "Thyroid Treatment Natural",
-    "Ayurvedic Clinic Kadur",
+    // Location & General
+    "Ayurvedic Doctor Bangalore",
+    "Ayurvedic Clinic Whitefield",
+    "Online Ayurvedic Consultant Bangalore",
+    "Online Ayurveda Consultation",
     "Dr. Anisa Sarvath",
-    "Holistic Healing",
-    "Infertility Ayurvedic Treatment"
+    "Women's Health Specialist Bangalore",
+    
+    // Treatments
+    "PCOS Treatment Ayurveda Bangalore",
+    "PCOD Natural Hormone Balance therapies",
+    "Ayurvedic Infertility Treatment Whitefield",
+    "Enhance fertility naturally detox therapies",
+    "Menstrual Disorders Ayurvedic Care",
+    "Relief heavy bleeding irregular cycles Ayurveda",
+    "Ayurvedic Weight Management Bangalore",
+    "Healthy sustainable weight loss Ayurveda",
+    "Skin and Hair Ayurvedic detox protocols",
+    "Holistic Cycle Regulation",
   ],
   authors: [{ name: "Dr. Anisa Sarvath" }],
   creator: "Dr. Anisa Sarvath",
