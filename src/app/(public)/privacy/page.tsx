@@ -48,7 +48,7 @@ export default function PrivacyPage() {
           <p>
             If you have any questions about this Privacy Policy or our Terms of Service, please contact us at:
             <br />
-            <strong>Email:</strong> <Link href="mailto:hello@dranisaclinic.com">hello@dranisaclinic.com</Link>
+            <strong>Email:</strong> <Link href="mailto:dranisa06@gmail.com">dranisa06@gmail.com</Link>
             <br />
             <strong>Phone:</strong> +91 74834 52036
           </p>

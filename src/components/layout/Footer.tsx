@@ -30,7 +30,7 @@ export function Footer() {
           <h4 className="font-bold text-white mb-4">Contact</h4>
           <ul className="space-y-2 text-sm text-slate-400">
             <li>+91 74834 52036</li>
-            <li>hello@dranisaclinic.com</li>
+            <li>dranisa06@gmail.com</li>
             <li>Kadur, Chikkamagaluru, Karnataka</li>
           </ul>
         </div>

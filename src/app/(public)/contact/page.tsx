@@ -92,7 +92,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">hello@dranisaclinic.com</p>
+                    <p className="text-muted-foreground">dranisa06@gmail.com</p>
                   </div>
                 </div>
               </div>
