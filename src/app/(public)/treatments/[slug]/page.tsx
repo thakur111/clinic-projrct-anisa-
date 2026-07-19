@@ -43,6 +43,27 @@ const treatmentData = {
   }
 };
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  // @ts-ignore
+  const treatment = treatmentData[resolvedParams.slug];
+
+  if (!treatment) {
+    return {
+      title: "Treatment Not Found",
+    };
+  }
+
+  return {
+    title: `${treatment.title} Treatment`,
+    description: treatment.description,
+    openGraph: {
+      title: `${treatment.title} Treatment | Dr. Anisa Sarvath`,
+      description: treatment.description,
+    },
+  };
+}
+
 export default async function TreatmentDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   // @ts-ignore

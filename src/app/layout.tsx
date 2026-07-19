@@ -15,8 +15,49 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Anisa Sarvath | Women's Holistic Ayurvedic Care",
-  description: "Premium healthcare web application for an Ayurvedic Women's Healthcare Clinic.",
+  metadataBase: new URL("https://dranisa.in"),
+  title: {
+    default: "Dr. Anisa Sarvath | Ayurvedic Women's Healthcare Clinic",
+    template: "%s | Dr. Anisa Sarvath",
+  },
+  description: "Premium holistic Ayurvedic treatments for women specializing in PCOS, Thyroid, Infertility, and natural weight management by Dr. Anisa Sarvath.",
+  keywords: [
+    "Ayurvedic Doctor",
+    "Women's Health",
+    "PCOS Treatment Ayurveda",
+    "Thyroid Treatment Natural",
+    "Ayurvedic Clinic Kadur",
+    "Dr. Anisa Sarvath",
+    "Holistic Healing",
+    "Infertility Ayurvedic Treatment"
+  ],
+  authors: [{ name: "Dr. Anisa Sarvath" }],
+  creator: "Dr. Anisa Sarvath",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://dranisa.in",
+    title: "Dr. Anisa Sarvath | Ayurvedic Women's Healthcare Clinic",
+    description: "Experience holistic, personalized Ayurvedic care for PCOS, thyroid, infertility, and more.",
+    siteName: "Dr. Anisa Sarvath Clinic",
+    images: [
+      {
+        url: "/images/ayurveda-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Anisa Sarvath Ayurvedic Clinic",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Anisa Sarvath | Ayurvedic Women's Healthcare Clinic",
+    description: "Premium holistic Ayurvedic treatments for women.",
+    images: ["/images/ayurveda-hero.png"],
+  },
+  alternates: {
+    canonical: "https://dranisa.in",
+  },
 };
 
 export default function RootLayout({
