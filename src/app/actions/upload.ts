@@ -10,27 +10,18 @@ export async function uploadImage(formData: FormData) {
       return { success: false, error: "No file uploaded" };
     }
 
+    // Read the file as an ArrayBuffer
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Generate unique filename to avoid overwrites
-    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    const ext = path.extname(file.name) || ".jpg";
-    const filename = `img_${uniqueSuffix}${ext}`;
+    // Convert the buffer to a Base64 string
+    // Format: data:[<mediatype>];base64,<data>
+    const mimeType = file.type || 'image/jpeg';
+    const base64Data = buffer.toString('base64');
+    const base64Url = `data:${mimeType};base64,${base64Data}`;
 
-    const uploadDir = path.join(process.cwd(), "public", "uploads");
-    const filepath = path.join(uploadDir, filename);
-
-    // Ensure the directory exists
-    try {
-      await import("fs/promises").then((fs) => fs.mkdir(uploadDir, { recursive: true }));
-    } catch (err) {
-      // Ignore if exists
-    }
-
-    await writeFile(filepath, buffer);
-
-    return { success: true, url: `/uploads/${filename}` };
+    // Return the Base64 URL directly, avoiding local filesystem writes which fail on Vercel
+    return { success: true, url: base64Url };
   } catch (error) {
     console.error("Error uploading image:", error);
     return { success: false, error: "Upload failed" };
