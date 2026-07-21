@@ -83,6 +83,29 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {/* Global JSON-LD Schema for Medical Clinic */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": ["MedicalClinic", "LocalBusiness"],
+              "name": "Dr. Anisa Sarvath Clinic",
+              "image": "https://dranisa.in/images/ayurveda-hero.png",
+              "url": "https://dranisa.in",
+              "telephone": "+917483452036",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Kadur",
+                "addressLocality": "Chikkamagaluru",
+                "addressRegion": "Karnataka",
+                "addressCountry": "IN"
+              },
+              "medicalSpecialty": ["Ayurvedic", "Gynecologic"],
+              "description": "Premium holistic Ayurvedic treatments for women specializing in PCOS, Thyroid, Infertility, and natural weight management by Dr. Anisa Sarvath."
+            })
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

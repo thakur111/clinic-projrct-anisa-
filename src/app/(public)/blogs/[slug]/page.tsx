@@ -38,6 +38,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <div className="min-h-screen bg-background pb-20 pt-12">
       <div className="container mx-auto px-6 max-w-4xl">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": blog.seoTitle || blog.title,
+              "description": blog.seoDesc || blog.excerpt,
+              "image": blog.imageUrl ? [blog.imageUrl] : [],
+              "datePublished": blog.createdAt.toISOString(),
+              "author": [{
+                "@type": "Person",
+                "name": "Dr. Anisa Sarvath",
+                "url": "https://dranisa.in/about"
+              }]
+            })
+          }}
+        />
         <Link href="/blogs" className="inline-flex items-center text-sm font-medium text-primary hover:underline mb-8">
           <ChevronLeft className="h-4 w-4 mr-1" /> Back to all blogs
         </Link>
