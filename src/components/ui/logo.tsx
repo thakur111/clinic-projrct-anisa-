@@ -1,6 +1,6 @@
 export function ClinicLogo({ className = "w-10 h-10" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
       {/* Outer elegant circle/swirl */}
       <path d="M50 5C25.147 5 5 25.147 5 50C5 74.853 25.147 95 50 95C74.853 95 95 74.853 95 50" stroke="#1F5E3B" strokeWidth="3" strokeLinecap="round" />
       

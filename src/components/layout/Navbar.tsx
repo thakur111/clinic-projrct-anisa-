@@ -26,6 +26,7 @@ export function Navbar() {
           <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
           <Link href="/treatments" className="hover:text-foreground transition-colors">Treatments</Link>
           <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+          <Link href="/testimonials" className="hover:text-foreground transition-colors">Testimonials</Link>
           <Link href="/blogs" className="hover:text-foreground transition-colors">Blogs</Link>
           <Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link>
           <ThemeToggle />
@@ -38,7 +39,7 @@ export function Navbar() {
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
           <Sheet>
-            <SheetTrigger className="p-2 -mr-2 text-foreground">
+            <SheetTrigger className="p-2 -mr-2 text-foreground" aria-label="Open mobile menu">
               <Menu className="h-6 w-6" />
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] flex flex-col pt-12">
@@ -47,6 +48,7 @@ export function Navbar() {
                 <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
                 <Link href="/treatments" className="hover:text-foreground transition-colors">Treatments</Link>
                 <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+                <Link href="/testimonials" className="hover:text-foreground transition-colors">Testimonials</Link>
                 <Link href="/blogs" className="hover:text-foreground transition-colors">Blogs</Link>
                 <Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link>
                 
