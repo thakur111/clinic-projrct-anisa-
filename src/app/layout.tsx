@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -84,7 +85,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {/* Global JSON-LD Schema for Medical Clinic */}
-        <script
+        <Script
+          id="medical-clinic-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({

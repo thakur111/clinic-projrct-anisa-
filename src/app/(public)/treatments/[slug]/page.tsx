@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { treatmentData } from "@/data/treatments";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -68,8 +69,8 @@ export default async function TreatmentDetailsPage({ params }: { params: Promise
   return (
     <div className="min-h-screen bg-background pb-20">
       {/* Inject JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
+      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id="medical-condition-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema) }} />
 
       {/* Hero */}
       <section className="bg-primary/5 pt-12 pb-20 border-b border-primary/10">
