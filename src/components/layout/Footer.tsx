@@ -35,7 +35,6 @@ export function Footer() {
             <li><Link href="/blogs" className="hover:text-white transition-colors">Blogs</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             <li><Link href="/faq" className="hover:text-white transition-colors">FAQs</Link></li>
-            <li><Link href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</Link></li>
           </ul>
         </div>
         <div>
