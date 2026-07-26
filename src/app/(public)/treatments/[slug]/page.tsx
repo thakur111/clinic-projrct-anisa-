@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { treatmentData } from "@/data/treatments";
 import { Metadata } from "next";
 import Script from "next/script";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { ShareButtons } from "@/components/seo/ShareButtons";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -75,15 +77,17 @@ export default async function TreatmentDetailsPage({ params }: { params: Promise
       {/* Hero */}
       <section className="bg-primary/5 pt-12 pb-20 border-b border-primary/10">
         <div className="container mx-auto px-6 max-w-4xl">
-          <Link href="/treatments" className="inline-flex items-center text-sm font-medium text-primary hover:underline mb-8">
-            <ChevronLeft className="h-4 w-4 mr-1" /> Back to Treatments
-          </Link>
+          <Breadcrumbs items={[
+            { label: "Treatments", href: "/treatments" },
+            { label: treatment.title, href: `/treatments/${resolvedParams.slug}` }
+          ]} />
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-6">
             {treatment.title}
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <p className="text-xl text-slate-600 leading-relaxed mb-6">
             {treatment.description}
           </p>
+          <ShareButtons title={treatment.title} url={`/treatments/${resolvedParams.slug}`} />
         </div>
       </section>
 

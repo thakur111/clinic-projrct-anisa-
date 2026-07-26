@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppWidget } from "@/components/ui/whatsapp-widget";
+import { BookingPopup } from "@/components/ui/booking-popup";
 import { prisma } from "@/lib/prisma";
 
 export default async function PublicLayout({
@@ -17,6 +18,7 @@ export default async function PublicLayout({
       <Navbar />
       {children}
       <WhatsAppWidget phoneNumber={whatsappNumber} />
+      <BookingPopup />
       <Footer />
     </>
   );

@@ -4,6 +4,8 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import Script from "next/script";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { ShareButtons } from "@/components/seo/ShareButtons";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -58,9 +60,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             })
           }}
         />
-        <Link href="/blogs" className="inline-flex items-center text-sm font-medium text-primary hover:underline mb-8">
-          <ChevronLeft className="h-4 w-4 mr-1" /> Back to all blogs
-        </Link>
+        <Breadcrumbs items={[
+          { label: "Blogs", href: "/blogs" },
+          { label: blog.title, href: `/blogs/${blog.slug}` }
+        ]} />
         
         <div className="mb-8">
           <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
@@ -69,9 +72,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-6 leading-tight">
             {blog.title}
           </h1>
-          <div className="text-slate-500 text-sm">
+          <div className="text-slate-500 text-sm mb-4">
             Published on {blog.createdAt.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
           </div>
+          <ShareButtons title={blog.title} url={`/blogs/${blog.slug}`} />
         </div>
 
         {blog.imageUrl && (

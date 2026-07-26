@@ -7,6 +7,14 @@ export function Footer() {
         <div className="space-y-4">
           <h3 className="font-heading font-bold text-2xl text-white">Dr. Anisa Sarvath</h3>
           <p className="text-sm leading-relaxed">Premium Ayurvedic Women's Healthcare Clinic specializing in holistic, natural treatments.</p>
+          <div className="pt-2">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Verified Medical Profiles</p>
+            <div className="flex flex-wrap gap-3 text-xs">
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">Google Business</a>
+              <a href="https://practo.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Practo Profile</a>
+              <a href="https://justdial.com" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">JustDial</a>
+            </div>
+          </div>
         </div>
         <div>
           <h4 className="font-bold text-white mb-4">Treatments</h4>
@@ -15,6 +23,8 @@ export function Footer() {
             <li><Link href="/treatments/thyroid-disorders" className="hover:text-white transition-colors">Thyroid Care</Link></li>
             <li><Link href="/treatments/infertility" className="hover:text-white transition-colors">Infertility</Link></li>
             <li><Link href="/treatments/weight-management" className="hover:text-white transition-colors">Weight Management</Link></li>
+            <li><Link href="/treatments/skin-hair" className="hover:text-white transition-colors">Skin & Hair Care</Link></li>
+            <li><Link href="/treatments/menstrual-disorders" className="hover:text-white transition-colors">Menstrual Disorders</Link></li>
           </ul>
         </div>
         <div>
@@ -24,6 +34,8 @@ export function Footer() {
             <li><Link href="/book-appointment" className="hover:text-white transition-colors">Book Appointment</Link></li>
             <li><Link href="/blogs" className="hover:text-white transition-colors">Blogs</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+            <li><Link href="/faq" className="hover:text-white transition-colors">FAQs</Link></li>
+            <li><Link href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</Link></li>
           </ul>
         </div>
         <div>
