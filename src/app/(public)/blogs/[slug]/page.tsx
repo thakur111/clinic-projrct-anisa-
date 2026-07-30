@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ShareButtons } from "@/components/seo/ShareButtons";
+import { MedicalAuthorityBadge } from "@/components/seo/MedicalAuthorityBadge";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -85,9 +86,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         )}
 
-        <div className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-primary">
+        <div className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-primary mb-8">
           <div dangerouslySetInnerHTML={{ __html: blog.content }} />
         </div>
+
+        <MedicalAuthorityBadge />
       </div>
     </div>
   );

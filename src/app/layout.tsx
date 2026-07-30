@@ -84,27 +84,46 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* Global JSON-LD Schema for Medical Clinic */}
+        {/* Global JSON-LD Schema for Medical Clinic & Physician E-E-A-T */}
         <Script
           id="medical-clinic-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["MedicalClinic", "LocalBusiness"],
-              "name": "Dr. Anisa Sarvath Clinic",
-              "image": "https://dranisa.in/images/ayurveda-hero.png",
-              "url": "https://dranisa.in",
-              "telephone": "+917483452036",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Kadur",
-                "addressLocality": "Chikkamagaluru",
-                "addressRegion": "Karnataka",
-                "addressCountry": "IN"
-              },
-              "medicalSpecialty": ["Ayurvedic", "Gynecologic"],
-              "description": "Premium holistic Ayurvedic treatments for women specializing in PCOS, Thyroid, Infertility, and natural weight management by Dr. Anisa Sarvath."
+              "@graph": [
+                {
+                  "@type": ["MedicalClinic", "LocalBusiness"],
+                  "@id": "https://dranisa.in/#clinic",
+                  "name": "Dr. Anisa Sarvath Clinic",
+                  "image": "https://dranisa.in/images/ayurveda-hero.png",
+                  "url": "https://dranisa.in",
+                  "telephone": "+917483452036",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Whitefield",
+                    "addressLocality": "Bangalore",
+                    "addressRegion": "Karnataka",
+                    "postalCode": "560066",
+                    "addressCountry": "IN"
+                  },
+                  "medicalSpecialty": ["Ayurvedic", "Gynecologic"],
+                  "description": "Premium holistic Ayurvedic treatments for women specializing in PCOS, Thyroid, Infertility, and natural weight management by Dr. Anisa Sarvath.",
+                  "areaServed": ["Whitefield", "Marathahalli", "ITPL", "Indiranagar", "Bangalore", "Karnataka"]
+                },
+                {
+                  "@type": "Physician",
+                  "@id": "https://dranisa.in/#physician",
+                  "name": "Dr. Anisa Sarvath",
+                  "jobTitle": "Ayurvedic Physician & Gynecologic Specialist",
+                  "url": "https://dranisa.in/about",
+                  "worksFor": {
+                    "@id": "https://dranisa.in/#clinic"
+                  },
+                  "medicalSpecialty": ["Ayurvedic Medicine", "Women's Health", "PCOS & PCOD Care", "Infertility Treatment"],
+                  "description": "BAMS qualified Ayurvedic Physician specializing in women's hormonal balance, menstrual health, and holistic wellness."
+                }
+              ]
             })
           }}
         />

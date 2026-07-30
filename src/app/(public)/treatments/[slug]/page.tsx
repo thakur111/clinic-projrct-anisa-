@@ -7,6 +7,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ShareButtons } from "@/components/seo/ShareButtons";
+import { MedicalAuthorityBadge } from "@/components/seo/MedicalAuthorityBadge";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -87,6 +88,7 @@ export default async function TreatmentDetailsPage({ params }: { params: Promise
           <p className="text-xl text-slate-600 leading-relaxed mb-6">
             {treatment.description}
           </p>
+          <MedicalAuthorityBadge />
           <ShareButtons title={treatment.title} url={`/treatments/${resolvedParams.slug}`} />
         </div>
       </section>

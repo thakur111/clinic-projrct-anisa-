@@ -42,7 +42,7 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-slate-400">
             <li>+91 74834 52036</li>
             <li>dranisa06@gmail.com</li>
-            <li>Kadur, Chikkamagaluru, Karnataka</li>
+            <li>Whitefield, Bangalore, Karnataka</li>
           </ul>
         </div>
       </div>

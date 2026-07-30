@@ -57,7 +57,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Address</h3>
                     <p className="text-muted-foreground">
-                      Kadur, Chikkamagaluru<br />
+                      Whitefield, Bangalore<br />
                       Karnataka, India
                     </p>
                   </div>
@@ -98,9 +98,40 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Optional Map Placeholder */}
-            <div className="h-64 bg-muted rounded-3xl overflow-hidden border border-border flex items-center justify-center text-muted-foreground">
-              [Google Maps Embed]
+            {/* Interactive Google Map & Local Directions */}
+            <div className="space-y-4">
+              <div className="h-72 bg-muted rounded-3xl overflow-hidden border border-border relative shadow-sm">
+                <iframe
+                  title="Dr. Anisa Sarvath Clinic Location - Whitefield, Bangalore, Karnataka"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62208.57140810756!2d77.7011!3d12.9698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+
+              <div className="bg-emerald-50/70 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 rounded-2xl p-5 text-sm space-y-2">
+                <div className="font-bold text-emerald-900 dark:text-emerald-300 flex items-center justify-between">
+                  <span>📍 Local Service Area & Directions</span>
+                  <a
+                    href="https://maps.google.com/?q=Whitefield,+Bangalore,+Karnataka"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-primary underline hover:text-primary/80 font-medium"
+                  >
+                    Open in Google Maps &rarr;
+                  </a>
+                </div>
+                <p className="text-slate-600 dark:text-slate-300">
+                  <strong>Serving:</strong> Whitefield, Marathahalli, ITPL, Indiranagar, Electronic City, and patients across Bangalore & Karnataka via both in-clinic and video consultations.
+                </p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  <strong>Verified Medical Profile (NAP):</strong> Dr. Anisa Sarvath Clinic | Whitefield, Bangalore, Karnataka | +91 74834 52036
+                </p>
+              </div>
             </div>
           </div>
 
