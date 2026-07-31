@@ -41,6 +41,14 @@ export function MedicalAuthorityBadge() {
           >
             Doctor Credentials &rarr;
           </Link>
+          <a
+            href="https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
+          >
+            Practo Profile ↗
+          </a>
           <Link
             href="/book-appointment"
             className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium transition-colors"

@@ -109,7 +109,8 @@ export default function RootLayout({
                   },
                   "medicalSpecialty": ["Ayurvedic", "Gynecologic"],
                   "description": "Premium holistic Ayurvedic treatments for women specializing in PCOS, Thyroid, Infertility, and natural weight management by Dr. Anisa Sarvath.",
-                  "areaServed": ["Whitefield", "Marathahalli", "ITPL", "Indiranagar", "Bangalore", "Karnataka"]
+                  "areaServed": ["Whitefield", "Marathahalli", "ITPL", "Indiranagar", "Bangalore", "Karnataka"],
+                  "sameAs": ["https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli"]
                 },
                 {
                   "@type": "Physician",
@@ -121,7 +122,8 @@ export default function RootLayout({
                     "@id": "https://dranisa.in/#clinic"
                   },
                   "medicalSpecialty": ["Ayurvedic Medicine", "Women's Health", "PCOS & PCOD Care", "Infertility Treatment"],
-                  "description": "BAMS qualified Ayurvedic Physician specializing in women's hormonal balance, menstrual health, and holistic wellness."
+                  "description": "BAMS qualified Ayurvedic Physician specializing in women's hormonal balance, menstrual health, and holistic wellness.",
+                  "sameAs": ["https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli"]
                 }
               ]
             })

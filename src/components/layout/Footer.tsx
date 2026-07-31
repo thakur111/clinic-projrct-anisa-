@@ -35,6 +35,16 @@ export function Footer() {
             <li><Link href="/blogs" className="hover:text-white transition-colors">Blogs</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             <li><Link href="/faq" className="hover:text-white transition-colors">FAQs</Link></li>
+            <li>
+              <a
+                href="https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors text-blue-400 font-medium inline-flex items-center gap-1"
+              >
+                Practo Profile ↗
+              </a>
+            </li>
           </ul>
         </div>
         <div>
