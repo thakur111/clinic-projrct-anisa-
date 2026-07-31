@@ -24,7 +24,7 @@ export default function BookAppointmentPage() {
               </div>
             </div>
             <a
-              href="https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli"
+              href="https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli/overview"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs whitespace-nowrap transition-colors shadow-sm"

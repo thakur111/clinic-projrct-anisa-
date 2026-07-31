@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/practo",
-        destination: "https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli",
+        destination: "https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli/overview",
         permanent: true,
       },
     ];
