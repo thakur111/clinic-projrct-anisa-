@@ -11,7 +11,7 @@ export function Footer() {
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Verified Medical Profiles</p>
             <div className="flex flex-wrap gap-3 text-xs">
               <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">Google Business</a>
-              <a href="https://practo.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Practo Profile</a>
+              <a href="https://www.practo.com/bangalore/clinic/dr-anisa-clinic-thubarahalli/overview" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Practo Profile</a>
               <a href="https://justdial.com" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">JustDial</a>
             </div>
           </div>
