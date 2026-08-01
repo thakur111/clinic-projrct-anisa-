@@ -42,7 +42,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors text-blue-400 font-medium inline-flex items-center gap-1"
               >
-                Practo Profile ↗
+                Practo Reference ↗
               </a>
             </li>
           </ul>
