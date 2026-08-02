@@ -87,12 +87,18 @@ export async function TestimonialsSection() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
           <Link
             href="/testimonials"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-emerald-600 text-emerald-700 dark:text-emerald-400 font-medium hover:bg-emerald-50 dark:hover:bg-emerald-950/40 transition-colors text-sm"
           >
             View All Patient Testimonials &rarr;
+          </Link>
+          <Link
+            href="/testimonials#leave-review"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 text-white font-medium hover:bg-emerald-700 shadow-md shadow-emerald-900/20 transition-all text-sm"
+          >
+            Share Your Story / Leave a Review ✨
           </Link>
         </div>
       </div>

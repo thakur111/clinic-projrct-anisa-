@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
+import { ReviewSubmissionForm } from "@/components/testimonials/ReviewSubmissionForm";
 
 export const metadata = {
   title: "Patient Testimonials | Dr. Anisa Sarvath Clinic",
@@ -115,6 +116,8 @@ export default async function TestimonialsPage() {
               </Card>
             ))}
           </div>
+
+          <ReviewSubmissionForm />
         </div>
       </section>
     </div>
