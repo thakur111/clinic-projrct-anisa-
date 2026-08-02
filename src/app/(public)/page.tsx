@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { TreatmentsSection } from "@/components/home/TreatmentsSection";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -9,6 +10,8 @@ export default function Home() {
       <Hero />
       
       <TreatmentsSection />
+
+      <TestimonialsSection />
 
       {/* Patient Journey / CTA Section */}
       <section className="py-24 bg-primary/5">
